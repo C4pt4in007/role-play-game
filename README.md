@@ -1,5 +1,5 @@
 Note: - This was a college assignment and the problem was given to us by professor. I do not take any credit in creating this problem, we were given a base structure of the project,
-So, I had to only write code inside Game.h and Game.cpp which had empty constructor & function definitions. The test suit GameTester GameTesterMain was already developed.
+So, I had to only write code inside Game.h and Game.cpp which had empty constructor & empty function definitions. The test suit GameTester GameTesterMain was already developed.
 
 # role-play-game
 You are the most junior programmer in a development team, whose task is to develop some type of role-play game. Your team leader hasn't decided the details of the game yet, but you are tasked with developing some C++ classes to model some entities (namely players and objects) and their basic interactions, as described below. It is not a full game and most of the actual game logic are not being implemented here.
