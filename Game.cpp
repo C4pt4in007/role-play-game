@@ -58,8 +58,7 @@ string Food::print() const {
 
 void Food::use() {
 	// IMPLEMENT ME
-	if(this->owner_->health_ <=0)
-		throw std::logic_error("");
+	
 	int ownerStamina = this->owner_->stamina_;
 	if((ownerStamina + this->getValue()) >= 100)
 	{
@@ -91,8 +90,7 @@ string Weapon::print() const {
 }
 void Weapon::use() {
 	// IMPLEMENT ME
-	if(this->owner_->health_ <=0)
-		throw std::logic_error("");
+	
 
 	if(this->owner_->weaponInUse_ != nullptr)
 	{
@@ -115,9 +113,7 @@ string Armour::print() const {
 }
 
 void Armour::use() {
-	if(this->owner_->health_ <=0)
-		throw std::logic_error("");
-	
+		
 	owner_->listOfArmourInUse_.push_back(this);
 }
 // ------------------- Player class ----------------------
@@ -186,6 +182,8 @@ string Player::print() const {
 
 bool Player::use(string name) {
 	// IMPLEMENT ME
+	if(this->health_ <=0)
+		throw std::logic_error("");
 	auto item = find_if(listOfInventory_.begin(), listOfInventory_.end(), [name](const std::unique_ptr<Object>& lt) {
                         return lt.get()->getName() == name;
                    });
